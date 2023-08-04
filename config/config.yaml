@@ -1,0 +1,10 @@
+
+artifact_root: artifacts
+
+data_ingestion:
+    root_dir: artifacts/data_ingestion
+    train_path: artifacts/data_ingestion
+    test_path: artifacts/data_ingestion
+    raw_path: artifacts/data_ingestion 
+
+    
