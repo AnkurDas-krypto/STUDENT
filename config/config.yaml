@@ -19,4 +19,8 @@ data_transformation:
     train_arr: artifacts/data_transformation
     test_arr: artifacts/data_transformation
 
-    
+model_trainer:
+    root_dir: artifacts/model_trainer
+    model_path: artifacts/model_trainer/model.pkl
+    train_arr: artifacts/data_transformation
+    test_arr: artifacts/data_transformation

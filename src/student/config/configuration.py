@@ -2,7 +2,8 @@ from src.student.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from src.student.utils.common import read_yaml, create_directories
 from src.student.entity import (DataIngestionConfig, 
                                 DataValidationConfig,
-                                DataTransformationConfig)
+                                DataTransformationConfig,
+                                ModelTrainerConfig)
 
 
 class ConfigurationManager:
@@ -47,3 +48,16 @@ class ConfigurationManager:
             train_arr = config.train_arr,
             test_arr= config.test_arr)
         return data_transformation_config
+    
+    def get_model_trainer(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir = config.root_dir,
+            model_path = config.model_path,
+            train_arr  = config.train_arr,
+            test_arr = config.test_arr
+        )
+        return model_trainer_config
+    

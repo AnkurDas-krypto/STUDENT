@@ -22,3 +22,10 @@ class DataTransformationConfig:
     data_path: Path
     train_arr: Path
     test_arr: Path  
+
+@dataclass
+class ModelTrainerConfig:
+    root_dir : Path
+    model_path : Path
+    train_arr : Path
+    test_arr : Path
