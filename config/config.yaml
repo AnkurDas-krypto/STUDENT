@@ -5,6 +5,18 @@ data_ingestion:
     root_dir: artifacts/data_ingestion
     train_path: artifacts/data_ingestion
     test_path: artifacts/data_ingestion
-    raw_path: artifacts/data_ingestion 
+    raw_path: artifacts/data_ingestion
+
+data_validation:
+    root_dir: artifacts/data_validation
+    validation_status: artifacts/data_validation/status.txt
+    ALL_REQUIRED_FILES: ["train.csv", "test.csv", "df.csv"]
+
+data_transformation:
+    root_dir: artifacts/data_transformation
+    preprocessor_path: artifacts/data_transformation/preprocessor.pkl
+    data_path: artifacts/data_ingestion
+    train_arr: artifacts/data_transformation
+    test_arr: artifacts/data_transformation
 
     
